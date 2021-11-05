@@ -1,0 +1,39 @@
+.wrapper {
+    position: fixed;
+    display: none;
+    align-items: center;
+    justify-content: space-between;
+    height: 260px;
+    width: 168px;
+    left: -100px;
+    top: 0;
+    bottom: 0;
+    margin-top: auto;
+    margin-bottom: auto;
+    animation: slideOut 0.2s ease-in;
+
+    img {
+        width: 48px;
+        height: 48px;
+        cursor: pointer;
+    }
+
+    &:hover {
+        animation: slideIn 0.2s ease-in;
+        left: 0px;
+    }
+
+    @media screen and (min-device-width: 768px) {
+        display: flex;
+    }
+}
+
+@keyframes slideIn {
+    0% { left: -100px; }
+    100% { left: 0px; }
+}
+
+@keyframes slideOut {
+    0% { left: 0px; }
+    100% { left: -100px; }
+}

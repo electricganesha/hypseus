@@ -1,0 +1,13 @@
+.footer {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 14px;
+    text-transform: none;
+    font-weight: 300;
+    text-align: center;
+    margin: auto;
+    margin: 24px auto 0 auto;
+
+    @media screen and (min-device-width: 768px) {
+        width: 480px;
+    }
+}

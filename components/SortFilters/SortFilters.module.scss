@@ -1,0 +1,21 @@
+.filters {
+    display: flex;
+    justify-content: flex-end;
+    margin: auto;
+    margin-bottom: 8px;
+    margin-right: 20px;
+    padding-top: 24px;
+
+    *:first-child {
+        margin: 0 16px;
+    }
+
+    @media screen and (min-device-width: 768px) {
+        justify-content: center;
+        width: 55%;
+        padding-top: 64px;
+        margin: auto;
+        margin-bottom: 8px;
+        margin-right: 0;
+    }
+}

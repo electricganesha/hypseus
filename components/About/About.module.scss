@@ -1,0 +1,57 @@
+.about {
+    padding-top: 48px;
+    max-width: 960px;
+    min-height: 55vh;
+    margin: auto;
+
+    h1 {
+        text-align: center;
+        font-family: 'Playfair Display', serif;
+        font-size: 36px;
+    }
+
+    p {
+        text-align: justify;
+        font-family: 'Playfair Display', serif; 
+    }
+
+    a {
+        color: dimgray;
+    }
+
+    a:hover {
+        color: darkblue;
+    }
+}
+
+.quote {
+    margin: auto;
+    text-align: justify;
+    margin-bottom: 12px;
+
+    q {
+        font-family: 'Source Sans Pro', sans-serif;
+        font-size: 12px;
+        font-weight: 300;
+        font-style: italic;
+    }
+
+    span {
+        font-family: 'Source Sans Pro', sans-serif;
+        font-size: 12px;
+        font-weight: 300;
+        margin-left: 12px;
+    }
+
+    @media screen and (min-device-width: 768px) {
+        margin-bottom: 0;
+
+        q {
+            font-size: 14px;
+        }
+
+        span {
+            font-size: 14px;
+        }
+    }
+}

@@ -1,0 +1,22 @@
+
+.grid {
+    width: 100%;
+    min-height: 55vh;
+    margin: auto;
+    margin-bottom: 120px;
+    display: grid;
+    justify-content: center;
+    column-gap: 24px;
+    row-gap: 64px;
+
+    @media screen and (min-device-width: 768px) {
+        width: 50%;
+        grid-template-columns: repeat(3, 1fr);
+        justify-content: space-between;
+    }
+}
+
+.content {
+    display: block;
+}
+
