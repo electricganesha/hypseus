@@ -8,6 +8,7 @@ import SortFilters from '../components/SortFilters';
 import ItemsGrid from '../components/ItemsGrid';
 import CategoryMenuWrapper from '../components/CategoryMenuWrapper';
 import Footer from '../components/Footer';
+import Auth from '../components/Auth';
 
 export default function Home(props) {
   const [isLoading, setIsLoading] = useState(false);
@@ -25,6 +26,7 @@ export default function Home(props) {
         <title>Hypseus</title>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
       </Head>
+      <Auth />
       <Header />
       <SortFilters />
       {isLoading ? <Spinner /> : <ItemsGrid data={props.items} />}
@@ -39,8 +41,8 @@ export const getServerSideProps = async ({ query }) => {
 
   if (query.category) {
     fetchURL.searchParams.append("category", query.category);
-  } 
-  
+  }
+
   if (query.sort) {
     fetchURL.searchParams.append("sort", query.sort);
     fetchURL.searchParams.append("order", query.order);

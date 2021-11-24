@@ -1,0 +1,41 @@
+.auth {
+    position: absolute;
+    top: 0;
+    right: 16px;
+
+    &__loggedin {
+        padding: 8px 8px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        svg {
+            width: 24px;
+            height: 24px;
+            margin-right: 8px;
+        }
+    }
+
+    &__cta {
+        font-size: 14px;
+        cursor: pointer;
+        transition: 300ms all;
+    }
+
+    &__cta::after {
+        background: none repeat scroll 0 0 transparent;
+        bottom: 0;
+        content: "";
+        display: block;
+        height: 2px;
+        left: 50%;
+        background: #000;
+        transition: width 0.3s ease 0s, left 0.3s ease 0s;
+        width: 0;
+    }
+
+    &__cta:hover::after {
+        width: 100%; 
+        left: 0; 
+    }
+}
