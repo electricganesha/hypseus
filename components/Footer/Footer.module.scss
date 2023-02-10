@@ -4,8 +4,9 @@
     text-transform: none;
     font-weight: 300;
     text-align: center;
-    margin: auto;
-    margin: 24px auto 0 auto;
+    padding-bottom: 24px;
+    position: fixed; 
+    bottom: 0;
 
     @media screen and (min-device-width: 768px) {
         width: 480px;

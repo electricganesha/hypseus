@@ -1,11 +1,11 @@
 import Image from 'next/image';
 
-const BADGE_ALL = '/asterisk.png';
-const BADGE_GAME = '/game.png';
-const BADGE_MUSIC = '/music.png';
-const BADGE_COMIC = '/comic.png';
-const BADGE_BOOK = '/book.png';
-const BADGE_MOVIE = '/movie.png';
+const BADGE_ALL = '/hypseus/icons/asterisk.png';
+const BADGE_GAME = '/hypseus/icons/game.png';
+const BADGE_MUSIC = '/hypseus/icons/music.png';
+const BADGE_COMIC = '/hypseus/icons/comic.png';
+const BADGE_BOOK = '/hypseus/icons/book.png';
+const BADGE_MOVIE = '/hypseus/icons/movie.png';
 
 export const getBadgeFromType = (type) => {
     switch (type) {

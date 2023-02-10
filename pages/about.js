@@ -7,7 +7,7 @@ import Header from '../components/Header';
 import Footer from '../components/Footer';
 import AboutComponent from '../components/About';
 
-export default function About(props) {
+export default function About() {
   const [isLoading, setIsLoading] = useState(false);
 
   Router.events.on('routeChangeStart', () => {

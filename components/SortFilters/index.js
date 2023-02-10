@@ -16,7 +16,7 @@ const SortFilters = props => {
                     query: { ...query, sort: 'name', order: 'desc',  }
                 }}>
                     <a onClick={() => setIsAlphabeticalDesc(false)}>
-                        <Image className={styles.filters__image} src="/from-a-to-z.png" alt="A to Z Filter" width="24" height="24" />
+                        <Image className={styles.filters__image} src="/hypseus/icons/from-a-to-z.png" alt="A to Z Filter" width="24" height="24" />
                     </a>
                 </Link>
                 :
@@ -24,7 +24,7 @@ const SortFilters = props => {
                     query: { ...query, sort: 'name', order: 'asc',  }
                 }}>
                     <a onClick={() => setIsAlphabeticalDesc(true)}>
-                        <Image className={styles.filters__image} src="/from-z-to-a.png" alt="Z to A Filter" width="24" height="24" />
+                        <Image className={styles.filters__image} src="/hypseus/icons/from-z-to-a.png" alt="Z to A Filter" width="24" height="24" />
                     </a>
                 </Link>
             }
@@ -34,7 +34,7 @@ const SortFilters = props => {
                     query: { ...query, sort: 'year', order: 'desc',  }
                 }}>
                     <a onClick={() => setIsDateDesc(false)}>
-                        <Image className={styles.filters__image} src="/date-descending.png" alt="Date Descending Filter" width="24" height="24" />
+                        <Image className={styles.filters__image} src="/hypseus/icons/date-descending.png" alt="Date Descending Filter" width="24" height="24" />
                     </a>
                 </Link>
                 :
@@ -42,7 +42,7 @@ const SortFilters = props => {
                     query: { ...query, sort: 'year', order: 'asc',  }
                 }}>
                     <a onClick={() => setIsDateDesc(true)}>
-                        <Image className={styles.filters__image} src="/date-ascending.png" alt="Date Ascending Filter" width="24" height="24" />
+                        <Image className={styles.filters__image} src="/hypseus/icons/date-ascending.png" alt="Date Ascending Filter" width="24" height="24" />
                     </a>
                 </Link>
             }

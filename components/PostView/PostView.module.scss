@@ -1,0 +1,33 @@
+.post {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    &__container {
+        height: 100%;
+        margin: 48px 0;
+        position: relative;
+    }
+
+    &__image {
+        object-fit: cover;
+        
+    }
+
+    &__title {
+        position: absolute;
+        top: 0;
+        max-width: 960px;
+        font-size: 36px;
+        text-align: center;
+        padding: 0 24px;
+        color: black;
+        text-shadow: -1px -1px 0 white, 1px -1px 0 white, -1px 1px 0 white, 1px 1px 0 white;
+    }
+
+    &__content {
+        max-width: 960px;
+        margin-bottom: 96px;
+    }
+}

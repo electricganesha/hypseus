@@ -4,4 +4,14 @@
     padding-top: 128px;
     font-family: 'Playfair Display', serif;
     font-size: 24px;
+
+    a {
+        color: black;
+        cursor: pointer; 
+
+        &:hover {
+            color: grey;
+            text-decoration: underline;
+        }
+    }
 }

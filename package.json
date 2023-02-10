@@ -5,7 +5,10 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "build-and-export": "next build && next export",
+    "build-and-deploy": "NODE_ENV=production && next build && vercel --prod",
+    "build-export-deploy": "NODE_ENV=production && next build && next export && vercel --prod"
   },
   "dependencies": {
     "firebase": "^9.5.0",

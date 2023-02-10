@@ -23,7 +23,6 @@ const modalStyles = {
 const Auth = props => {
     const [modalIsOpen, setIsOpen] = useState(false);
     const { user } = useContext(AuthContext); 
-    console.log(user);
 
     const uiConfig = {
         callbacks: {
@@ -31,8 +30,6 @@ const Auth = props => {
                 // User successfully signed in.
                 // Return type determines whether we continue the redirect automatically
                 // or whether we leave that to developer to handle.
-                console.log(authResult);
-                console.log(redirectUrl);
                 setAuth(authResult);
                 closeModal();
                 return false;

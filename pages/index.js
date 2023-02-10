@@ -26,7 +26,6 @@ export default function Home(props) {
         <title>Hypseus</title>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
       </Head>
-      <Auth />
       <Header />
       <SortFilters />
       {isLoading ? <Spinner /> : <ItemsGrid data={props.items} />}
@@ -36,22 +35,22 @@ export default function Home(props) {
   )
 }
 
-export const getServerSideProps = async ({ query }) => {
-  let fetchURL = new URL(`${process.env.API_HOST}/api/items`);
-
-  if (query.category) {
-    fetchURL.searchParams.append("category", query.category);
+export async function getServerSideProps(context) {
+let fetchURL = new URL(`${process.env.API_HOST}/api/items`);
+  if(context && context.req) {
+  const {category, sort, order } = context?.query;
+  if (category) {
+    fetchURL.searchParams.append("category", category);
   }
 
-  if (query.sort) {
-    fetchURL.searchParams.append("sort", query.sort);
-    fetchURL.searchParams.append("order", query.order);
+  if (sort) {
+    fetchURL.searchParams.append("sort", sort);
+    fetchURL.searchParams.append("order", order);
   }
-
+}
   const itemsRequest = await fetch(fetchURL.toString());
   const items = await itemsRequest.json();
-
   return {
     props: { items },
   };
-};
+}
