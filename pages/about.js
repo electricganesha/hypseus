@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
 
-import Head from 'next/head';
 import Router from 'next/router';
 import Spinner from '../components/Spinner';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import AboutComponent from '../components/About';
+import SocialMetaTags from '../components/SocialMetaTags';
 
 export default function About() {
   const [isLoading, setIsLoading] = useState(false);
@@ -19,10 +19,14 @@ export default function About() {
 
   return (
     <div>
-      <Head>
-        <title>Hypseus - Blog</title>
-        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
-      </Head>
+      <SocialMetaTags 
+        name="Hypseus - About"
+        description="Explore a selection of articles "
+        image="https://res.cloudinary.com/dhgkpiqzg/image/upload/v1676288226/hypseus/wanderer.jpg"
+        url="https://www.hypseus.com/about"
+        type="website"
+        keywords="blog, article, kant, sublime, media, movie, music, videogame, book, philosophy, art"
+      />
       <Header />
       {isLoading ?
         <Spinner />

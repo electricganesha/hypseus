@@ -4,11 +4,22 @@
     text-transform: none;
     font-weight: 300;
     text-align: center;
-    padding-bottom: 24px;
     position: fixed; 
-    bottom: 0;
+    bottom: -4px;
+    left: 0;
+    right: 0;
+    background-color: white;
+    border-radius: 4px;
+    padding: 12px 24px;
+
+    a {
+        text-decoration: underline;
+    }
 
     @media screen and (min-device-width: 768px) {
-        width: 480px;
+        left: 48px;
+        text-align: left;
+        max-width: fit-content;
+        bottom: 0;
     }
 }

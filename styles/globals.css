@@ -12,6 +12,11 @@ body {
     padding: 0;
 }
 
+a {
+    text-decoration: none;
+    color: black;
+}
+
 .bm-burger-button {
     position: absolute;
     width: 36px;

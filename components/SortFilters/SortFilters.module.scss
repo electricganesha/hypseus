@@ -3,19 +3,28 @@
     justify-content: flex-end;
     margin: auto;
     margin-bottom: 8px;
-    margin-right: 20px;
+    margin-right: 58px;
     padding-top: 24px;
+
+    &__image {
+        cursor: pointer;
+        transition: all 300ms;
+
+        &:hover {
+            filter: invert(0.5);
+        }
+    }
 
     *:first-child {
         margin: 0 16px;
     }
 
     @media screen and (min-device-width: 768px) {
-        justify-content: center;
-        width: 55%;
+        width: 100%;
+        max-width: 960px;
+        justify-content: flex-end;
         padding-top: 64px;
         margin: auto;
         margin-bottom: 8px;
-        margin-right: 0;
     }
 }

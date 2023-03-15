@@ -1,5 +1,6 @@
 import React from "react";
 import Image from "next/image";
+import Link from 'next/link';
 import styles from "./PostView.module.scss";
 import {cleanUpCloudinaryURL , convertToCloudinaryBlurURL} from '../../utils/cloudinary';
 
@@ -17,6 +18,10 @@ const PostView = ({post}) => {
           height={480}
         />
         <h1 className={styles.post__title}>{post.title}</h1>
+        <div className={styles.post__below}>
+          <p className={styles.post__date}>{new Date(post.date._seconds * 1000).toDateString()}</p>
+          <p className={styles.post__buy}>{post.affiliate ? <Link href={post.affiliate}><a>Buy {post.name} now on Amazon</a></Link> : null}</p>
+        </div>
       </div>
 
       <div

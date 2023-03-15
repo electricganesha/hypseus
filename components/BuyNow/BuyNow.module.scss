@@ -1,0 +1,54 @@
+.buyNow {
+    background-color: white;
+    border: 4px solid black;
+    position: fixed;
+    top: 24px;
+    right: 48px;
+    width: 120px;
+    height: 180px;
+    opacity: 1;
+    transition: opacity 300ms;
+
+    @media screen and (min-device-width: 768px) {
+        bottom: 120px;
+        right: 132px;
+    }
+
+    &--hide {
+        opacity: 0;
+    }
+
+    &__title {
+        z-index: 1;
+        position: absolute;
+        bottom: 0;
+        font-size: 12px;
+        text-align: center;
+        text-shadow: -1px -1px 0 white, 1px -1px 0 white, -1px 1px 0 white, 1px 1px 0 white;
+        color: black;
+    }
+
+    &__image {
+        object-fit: cover;
+    }
+}
+
+.cross {
+    height: 24px;
+    width: 100%;
+    position: relative;
+}
+
+.cross:after {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    content: "\00D7";
+    font-size: 24px; 
+    color: black;
+    text-shadow: -1px -1px 0 white, 1px -1px 0 white, -1px 1px 0 white, 1px 1px 0 white;
+    line-height: 24px;
+    text-align: center;
+    z-index: 1;
+}

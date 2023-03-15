@@ -7,15 +7,18 @@ const About = ({posts}) => {
     <div className={styles.blog}>
       {posts?.length ? (
         posts.map((post) => (
-          <Link
-            className={styles.blog__link}
-            key={post.slug}
-            href={`/blog/${post.slug}`}
-          >
-            <a>
-              <p>{post.title}</p>
-            </a>
-          </Link>
+          <>
+            <Link
+              className={styles.blog__link}
+              key={post.slug}
+              href={`/blog/${post.slug}`}
+            >
+              <a>
+                <p>{post.title}</p>
+              </a>
+            </Link>
+            <p className={styles.blog__date}>{new Date(post.date._seconds * 1000).toDateString()}</p>
+          </>
         ))
       ) : (
         <p>No blog posts yet...</p>
