@@ -6,7 +6,9 @@ const About = ({posts}) => {
   return (
     <div className={styles.blog}>
       {posts?.length ? (
-        posts.map((post) => (
+        posts.sort((a,b) => {
+          return b.date._seconds - a.date._seconds;
+          }).map((post) => (
           <>
             <Link
               className={styles.blog__link}
